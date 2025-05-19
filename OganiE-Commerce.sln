@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStorage.Api", "Presenta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway.Api", "Presentation\Gateway.Api\Gateway.Api.csproj", "{739F38E0-AE74-4914-8B04-DA7B5AFCBE88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentication.Api", "Presentation\Authentication.Api\Authentication.Api.csproj", "{7466AB1F-434F-4C33-9A7D-5AED38453D52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{739F38E0-AE74-4914-8B04-DA7B5AFCBE88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{739F38E0-AE74-4914-8B04-DA7B5AFCBE88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{739F38E0-AE74-4914-8B04-DA7B5AFCBE88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7466AB1F-434F-4C33-9A7D-5AED38453D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7466AB1F-434F-4C33-9A7D-5AED38453D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7466AB1F-434F-4C33-9A7D-5AED38453D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7466AB1F-434F-4C33-9A7D-5AED38453D52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{1453B0A9-A231-469D-BF21-060103D08209} = {643747C7-0307-8931-84D8-A7D1915E22E5}
 		{6A6674D8-1A11-40E6-829D-B584E64C7451} = {643747C7-0307-8931-84D8-A7D1915E22E5}
 		{739F38E0-AE74-4914-8B04-DA7B5AFCBE88} = {643747C7-0307-8931-84D8-A7D1915E22E5}
+		{7466AB1F-434F-4C33-9A7D-5AED38453D52} = {643747C7-0307-8931-84D8-A7D1915E22E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24A01D77-1FA1-4736-846D-A3ACD0FBA330}

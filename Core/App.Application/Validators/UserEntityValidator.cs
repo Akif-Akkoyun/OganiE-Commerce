@@ -7,8 +7,6 @@ namespace App.Application.Validators
     {
         public UserEntityValidator()
         {
-            RuleFor(user => user.Id)
-                .NotEmpty().WithMessage("User ID cannot be empty.");
             RuleFor(user => user.CreatedAt)
                 .NotEmpty().WithMessage("CreatedAt cannot be empty.")
                 .LessThanOrEqualTo(DateTime.UtcNow).WithMessage("CreatedAt must be in the past or present.");

@@ -27,11 +27,6 @@ namespace App.Application.Validators
                 .NotEmpty().WithMessage("Password cannot be empty.")
                 .MinimumLength(8).WithMessage("Password must be at least 8 characters long.")
                 .MaximumLength(100).WithMessage("Password cannot exceed 100 characters.");
-            RuleFor(user => user.PasswordRepeat)
-                .NotEmpty().WithMessage("Password repeat cannot be empty.")
-                .Equal(user => user.Password).WithMessage("Password repeat must match the password.")
-                .MinimumLength(8).WithMessage("Password repeat must be at least 8 characters long.")
-                .MaximumLength(100).WithMessage("Password repeat cannot exceed 100 characters.");
         }
     }
 }

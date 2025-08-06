@@ -19,6 +19,7 @@ namespace App.Persistence.Configurations
                 .IsRequired()
                 .HasMaxLength(100);
             builder.Property(c => c.Description)
+                .IsRequired()
                 .HasMaxLength(500);
         }
     }

@@ -4,7 +4,7 @@ namespace App.WebApi.WebApiExtensions.Extensions
 {
     public static class WebApiServiceCollectionExtensions
     {
-        public static IServiceCollection AddServices(this IServiceCollection services,IConfiguration configuration)
+        public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
         {
             var connectionString = configuration.GetConnectionString("DefaultConnection") 
                 ?? throw new InvalidOperationException("ConnectionString NotFound");

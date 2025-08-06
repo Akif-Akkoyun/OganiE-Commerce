@@ -21,7 +21,6 @@ namespace App.Persistence.Configurations
             builder.Property(u => u.LastName).IsRequired().HasMaxLength(50);
             builder.Property(u => u.Email).IsRequired().HasMaxLength(100);
             builder.Property(u => u.Password).IsRequired().HasMaxLength(100);
-            builder.Property(u => u.PasswordRepeat).IsRequired().HasMaxLength(100);
         }
     }
 }

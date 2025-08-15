@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace App.Domain.Entities
 {
-    public class RoleEntity
+    public class OrderEntity
     {
         public int Id { get; set; }
-        public string RoleName { get; set; } = string.Empty;
-        //navigation properties
-        public ICollection<UserEntity> Users { get; set; } = default!;
+        public int UserId { get; set; }
+        public string Address { get; set; } = string.Empty;
+        public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
     }
 }

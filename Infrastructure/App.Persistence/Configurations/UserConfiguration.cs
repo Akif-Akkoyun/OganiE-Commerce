@@ -13,14 +13,16 @@ namespace App.Persistence.Configurations
                 v => v,
                 v => DateTime.SpecifyKind(v, DateTimeKind.Utc)
             );
-            builder.Property(u => u.UpdatedAt).HasConversion(
-                v => v,
-                v => DateTime.SpecifyKind(v, DateTimeKind.Utc)
-            );
             builder.Property(u => u.FirstName).IsRequired().HasMaxLength(50);
             builder.Property(u => u.LastName).IsRequired().HasMaxLength(50);
             builder.Property(u => u.Email).IsRequired().HasMaxLength(100);
             builder.Property(u => u.Password).IsRequired().HasMaxLength(100);
+            builder.Property(u => u.RoleId).IsRequired();
+            builder.Property(u => u.Enabled).IsRequired();
+            builder.HasOne(u => u.Role)
+                .WithMany()
+                .HasForeignKey(u => u.RoleId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

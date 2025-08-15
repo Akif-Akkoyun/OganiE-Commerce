@@ -8,7 +8,6 @@ namespace App.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<CategoryEntity> builder)
         {
-            builder.ToTable("Categories");
             builder.HasKey(c => c.Id);
             builder.Property(c => c.Name)
                 .IsRequired()

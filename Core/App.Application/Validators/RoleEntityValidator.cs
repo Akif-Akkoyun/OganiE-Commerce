@@ -10,7 +10,6 @@ namespace App.Application.Validators
             RuleFor(role => role.RoleName)
                 .NotEmpty().WithMessage("Role name is required.")
                 .MaximumLength(50).WithMessage("Role name must not exceed 50 characters.");
-            
         }
     }
 }

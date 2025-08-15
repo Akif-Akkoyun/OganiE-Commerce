@@ -10,9 +10,6 @@ namespace App.Application.Validators
             RuleFor(user => user.CreatedAt)
                 .NotEmpty().WithMessage("CreatedAt cannot be empty.")
                 .LessThanOrEqualTo(DateTime.UtcNow).WithMessage("CreatedAt must be in the past or present.");
-            RuleFor(user => user.UpdatedAt)
-                .NotEmpty().WithMessage("UpdatedAt cannot be empty.")
-                .GreaterThanOrEqualTo(user => user.CreatedAt).WithMessage("UpdatedAt must be greater than or equal to CreatedAt.");
             RuleFor(user => user.FirstName)
                 .NotEmpty().WithMessage("First name cannot be empty.")
                 .MaximumLength(50).WithMessage("First name cannot exceed 50 characters.");
@@ -27,6 +24,12 @@ namespace App.Application.Validators
                 .NotEmpty().WithMessage("Password cannot be empty.")
                 .MinimumLength(8).WithMessage("Password must be at least 8 characters long.")
                 .MaximumLength(100).WithMessage("Password cannot exceed 100 characters.");
+            RuleFor(user => user.RoleId)
+                .GreaterThan(0).WithMessage("RoleId must be greater than 0.")
+                .WithMessage("RoleId must be a valid role.");
+            RuleFor(user => user.Enabled)
+                .NotNull().WithMessage("Enabled cannot be null.")
+                .Must(enabled => enabled == true || enabled == false).WithMessage("Enabled must be a boolean value.");
         }
     }
 }

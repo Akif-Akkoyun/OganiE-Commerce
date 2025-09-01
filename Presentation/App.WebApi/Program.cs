@@ -1,4 +1,5 @@
 using App.WebApi.WebApiExtensions.Extensions;
+using App.WebApi.WebApiExtensions.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,13 +12,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseCors("AllowAllOrigins");
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
+app.UseWebApiService();
 
 await app.RunAsync();
